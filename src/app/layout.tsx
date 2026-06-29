@@ -4,52 +4,33 @@ import './globals.css';
 
 export const metadata: Metadata = {
   title: {
-    default: '新应用 | 扣子编程',
-    template: '%s | 扣子编程',
+    default: 'Zebrads | 智能获客方案，覆盖全球10亿+用户',
+    template: '%s | Zebrads',
   },
   description:
-    '扣子编程是一款一站式云端 Vibe Coding 开发平台。通过对话轻松构建智能体、工作流和网站，实现从创意到上线的无缝衔接。',
+    'Zebrads 是面向全球市场的多源广告平台，提供弹窗、推送、问卷等多形式广告，结合反欺诈算法与智能出价，助力开发者、电商与品牌方实现高效用户增长。',
   keywords: [
-    '扣子编程',
-    'Coze Code',
-    'Vibe Coding',
-    'AI 编程',
-    '智能体搭建',
-    '工作流搭建',
-    '网站搭建',
-    '网站部署',
-    '全栈开发',
-    'AI 工程师',
+    'Zebrads',
+    '广告平台',
+    '全球获客',
+    '多源广告',
+    '弹窗广告',
+    '推送广告',
+    '反欺诈',
+    '智能出价',
+    '联盟营销',
+    '移动增长',
   ],
-  authors: [{ name: 'Coze Code Team', url: 'https://code.coze.cn' }],
-  generator: 'Coze Code',
-  // icons: {
-  //   icon: '',
-  // },
+  authors: [{ name: 'Zebrads Team' }],
+  generator: 'Zebrads',
   openGraph: {
-    title: '扣子编程 | 你的 AI 工程师已就位',
+    title: 'Zebrads | 智能获客方案，覆盖全球10亿+用户',
     description:
-      '我正在使用扣子编程 Vibe Coding，让创意瞬间上线。告别拖拽，拥抱心流。',
-    url: 'https://code.coze.cn',
-    siteName: '扣子编程',
+      '多源广告平台 · 反欺诈精准触达 · 195+ 国家与地区 · 日展示量超 120 亿次。',
+    siteName: 'Zebrads',
     locale: 'zh_CN',
     type: 'website',
-    // images: [
-    //   {
-    //     url: '',
-    //     width: 1200,
-    //     height: 630,
-    //     alt: '扣子编程 - 你的 AI 工程师',
-    //   },
-    // ],
   },
-  // twitter: {
-  //   card: 'summary_large_image',
-  //   title: 'Coze Code | Your AI Engineer is Here',
-  //   description:
-  //     'Build and deploy full-stack applications through AI conversation. No env setup, just flow.',
-  //   // images: [''],
-  // },
   robots: {
     index: true,
     follow: true,
@@ -64,8 +45,8 @@ export default function RootLayout({
   const isDev = process.env.COZE_PROJECT_ENV === 'DEV';
 
   return (
-    <html lang="en">
-      <body className={`antialiased`}>
+    <html lang="zh-CN">
+      <body className="antialiased bg-background text-foreground">
         {isDev && <Inspector />}
         {children}
       </body>
