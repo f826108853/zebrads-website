@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import {
   MousePointer2,
-  BellRing,
   Smartphone,
   LayoutPanelTop,
   ClipboardList,
@@ -41,21 +40,6 @@ const formats = [
       'iOS / macOS 同样可投',
       '原生贴片样式，与内容融合',
       '点击率均值 1.8% - 4.5%',
-    ],
-  },
-  {
-    id: 'push',
-    name: '推送提醒',
-    icon: BellRing,
-    short: 'Web Push',
-    headline: '用户离线也能精准触达',
-    intro:
-      '基于浏览器订阅的真实用户列表，可重复触达、可分时间段投放。配合自动化规则，是私域唤醒最佳工具。',
-    points: [
-      '可追溯用户订阅时间与渠道',
-      '支持冷热分桶与频次控制',
-      '离线下发，唤醒沉睡用户',
-      '兼容 Chrome / Firefox / Edge / 国产浏览器',
     ],
   },
   {
@@ -117,7 +101,7 @@ export function AdFormats() {
           </Reveal>
           <Reveal delay={100}>
             <h2 className="font-black text-[clamp(2rem,4.5vw,3.5rem)] leading-[1.05] tracking-tight">
-              五种格式，
+              四种格式，
               <br />
               覆盖每一个触达场景。
             </h2>
@@ -235,22 +219,18 @@ export function AdFormats() {
                           ? '$0.4'
                           : current.id === 'in-page'
                             ? '2.8%'
-                            : current.id === 'push'
-                              ? '1.2B'
-                              : current.id === 'interstitial'
-                                ? '12s'
-                                : '6×'}
+                            : current.id === 'interstitial'
+                              ? '12s'
+                              : '6×'}
                       </div>
                       <div className="text-[10px] text-zebra-stone uppercase tracking-wider">
                         {current.id === 'popunder'
                           ? 'CPM'
                           : current.id === 'in-page'
                             ? 'CTR'
-                            : current.id === 'push'
-                              ? '日触达'
-                              : current.id === 'interstitial'
-                                ? '驻留'
-                                : '互动率'}
+                            : current.id === 'interstitial'
+                              ? '驻留'
+                              : '互动率'}
                       </div>
                     </div>
                     <div>

@@ -6,7 +6,6 @@ const links = {
   产品: [
     { label: '弹窗广告', href: '#ad-formats' },
     { label: '页面内推送', href: '#ad-formats' },
-    { label: '推送提醒', href: '#ad-formats' },
     { label: '弹窗覆盖广告', href: '#ad-formats' },
     { label: '问卷调查广告', href: '#ad-formats' },
   ],
