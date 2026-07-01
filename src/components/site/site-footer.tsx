@@ -17,7 +17,6 @@ const links = {
   公司: [
     { label: '关于我们', href: '#about' },
     { label: '数据洞察', href: '#insights' },
-    { label: '合作伙伴', href: '#partners' },
     { label: '加入我们', href: '#careers' },
   ],
   支持: [
