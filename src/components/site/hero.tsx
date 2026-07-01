@@ -1,6 +1,6 @@
 'use client';
 
-import { ArrowRight, PlayCircle } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { Reveal } from './reveal';
 
 const heroStats = [
@@ -87,13 +87,6 @@ export function Hero() {
                 >
                   立即开始投放
                   <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                </a>
-                <a
-                  href="#demo"
-                  className="group inline-flex items-center gap-2 border border-zebra-bone/40 text-zebra-bone px-7 py-4 text-base font-semibold hover:bg-zebra-bone hover:text-zebra-ink transition-all duration-300"
-                >
-                  <PlayCircle className="h-5 w-5" />
-                  观看产品演示
                 </a>
               </div>
             </Reveal>
