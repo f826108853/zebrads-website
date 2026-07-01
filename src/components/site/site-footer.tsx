@@ -10,11 +10,9 @@ const links = {
     { label: '问卷调查广告', href: '#ad-formats' },
   ],
   解决方案: [
-    { label: '移动工具类', href: '#solutions' },
-    { label: '软件 / SaaS', href: '#solutions' },
-    { label: '电商', href: '#solutions' },
     { label: '游戏', href: '#solutions' },
-    { label: '金融', href: '#solutions' },
+    { label: '社交', href: '#solutions' },
+    { label: '短剧', href: '#solutions' },
   ],
   公司: [
     { label: '关于我们', href: '#about' },

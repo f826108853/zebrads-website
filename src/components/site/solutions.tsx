@@ -1,50 +1,29 @@
 import {
-  Wrench,
-  AppWindow,
-  UserPlus,
-  ShoppingBag,
-  Smartphone,
-  Banknote,
+  Gamepad2,
+  Users,
+  Clapperboard,
   ArrowUpRight,
 } from 'lucide-react';
 import { Reveal } from './reveal';
 
 const solutions = [
   {
-    icon: Wrench,
-    title: '移动工具类应用',
-    desc: '从清理大师到 VPN，工具类 App 的下载与激活全链路优化方案。',
-    metric: '装机成本 ↓42%',
+    icon: Gamepad2,
+    title: '游戏',
+    desc: '从休闲小游戏到中重度手游，全周期投放策略——冷启动激活、留存回捞与长线 LTV 一站打通。',
+    metric: 'CPI 下降 38%',
   },
   {
-    icon: AppWindow,
-    title: '软件',
-    desc: '面向 SaaS、桌面软件的多触点投放策略，覆盖试用、付费、续费场景。',
-    metric: '试用转化 ↑3.2×',
+    icon: Users,
+    title: '社交',
+    desc: '基于兴趣图谱与行为聚类的精准触达，帮社交平台跑通拉新、匹配与内容分发的完整增长闭环。',
+    metric: '次留 +22%',
   },
   {
-    icon: UserPlus,
-    title: '潜在客户线索',
-    desc: '问卷广告 + 表单深度链接，定向收集高意向 Leads，自动同步至 CRM。',
-    metric: 'CPL 行业最低区间',
-  },
-  {
-    icon: ShoppingBag,
-    title: '电商',
-    desc: '商品 Feed 自动生成素材，结合受众画像与购物意图模型，复购更稳。',
-    metric: 'ROAS 平均 4.6',
-  },
-  {
-    icon: Smartphone,
-    title: '移动 App',
-    desc: '从冷启动激活到长线 LTV，全周期投放策略，配合归因平台一键打通。',
-    metric: '次留 +18%',
-  },
-  {
-    icon: Banknote,
-    title: '金融',
-    desc: '合规优先的金融行业方案，从信用卡、借贷到投资理财，触达高净值人群。',
-    metric: '注册成本可控',
+    icon: Clapperboard,
+    title: '短剧',
+    desc: '短剧场景专属素材模板 + 智能出价，抓住用户前 3 秒的注意力，把点击稳稳转成付费与追更。',
+    metric: 'ROAS 平均 3.9',
   },
 ];
 
@@ -73,7 +52,7 @@ export function Solutions() {
           </Reveal>
           <Reveal className="lg:col-span-5" delay={150}>
             <p className="text-base md:text-lg text-zebra-stone leading-relaxed">
-              我们与超过 3 万个广告主合作的经验沉淀，凝结成 6 套垂直行业的开箱即用策略包。选择你的行业，剩下的交给 Zebrads。
+              我们与超过 3 万个广告主合作的经验沉淀，凝结成 3 套垂直行业的开箱即用策略包。选择你的行业，剩下的交给 Zebrads。
             </p>
           </Reveal>
         </div>
