@@ -3,7 +3,6 @@ import { Hero } from '@/components/site/hero';
 import { Features } from '@/components/site/features';
 import { AdFormats } from '@/components/site/ad-formats';
 import { Solutions } from '@/components/site/solutions';
-import { Testimonials } from '@/components/site/testimonials';
 import { Partners } from '@/components/site/partners';
 import { Blog } from '@/components/site/blog';
 import { CtaBanner } from '@/components/site/cta-banner';
@@ -18,7 +17,6 @@ export default function Home() {
         <Features />
         <AdFormats />
         <Solutions />
-        <Testimonials />
         <Partners />
         <Blog />
         <CtaBanner />
