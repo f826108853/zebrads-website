@@ -3,8 +3,6 @@ import {
   Globe2,
   Target,
   BarChart3,
-  Workflow,
-  HeadphonesIcon,
 } from 'lucide-react';
 import { Reveal } from './reveal';
 
@@ -32,18 +30,6 @@ const features = [
     title: '数据分析',
     desc: '流量预估、胜率统计、A/B 智能轮换——一块仪表盘看清整个投放链路的每一帧数据。',
     tag: '实时洞察',
-  },
-  {
-    icon: Workflow,
-    title: '自动化',
-    desc: '智能出价 + 自动化规则 + 多格式广告活动，从开户到优化全流程托管，让小团队也能跑出大盘子。',
-    tag: 'AI 托管',
-  },
-  {
-    icon: HeadphonesIcon,
-    title: '5 星级客户关怀',
-    desc: '7 × 24 中文客户经理 + 专业优化师团队，从素材准备到策略复盘，全程贴身陪跑。',
-    tag: '专属服务',
   },
 ];
 
@@ -80,7 +66,7 @@ export function Features() {
           </Reveal>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           {features.map((f, i) => (
             <Reveal
               key={f.title}
