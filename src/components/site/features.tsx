@@ -2,7 +2,6 @@ import {
   ShieldCheck,
   Globe2,
   Target,
-  BarChart3,
 } from 'lucide-react';
 import { Reveal } from './reveal';
 
@@ -24,12 +23,6 @@ const features = [
     title: '广告效果',
     desc: '支持自定义受众、兴趣标签与行为定向，配合素材智能生成系统，让每一个创意都跑在最佳赛道。',
     tag: '精准定向',
-  },
-  {
-    icon: BarChart3,
-    title: '数据分析',
-    desc: '流量预估、胜率统计、A/B 智能轮换——一块仪表盘看清整个投放链路的每一帧数据。',
-    tag: '实时洞察',
   },
 ];
 
@@ -66,7 +59,7 @@ export function Features() {
           </Reveal>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {features.map((f, i) => (
             <Reveal
               key={f.title}
