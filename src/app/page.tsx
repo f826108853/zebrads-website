@@ -4,7 +4,6 @@ import { Features } from '@/components/site/features';
 import { AdFormats } from '@/components/site/ad-formats';
 import { Solutions } from '@/components/site/solutions';
 import { CtaBanner } from '@/components/site/cta-banner';
-import { SiteFooter } from '@/components/site/site-footer';
 
 export default function Home() {
   return (
@@ -17,7 +16,6 @@ export default function Home() {
         <Solutions />
         <CtaBanner />
       </main>
-      <SiteFooter />
     </div>
   );
 }
