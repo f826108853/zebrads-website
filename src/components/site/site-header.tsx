@@ -50,16 +50,10 @@ export function SiteHeader() {
 
         <div className="hidden lg:flex items-center gap-3">
           <a
-            href="#login"
-            className="text-sm font-medium text-zebra-ink/80 hover:text-zebra-ink transition-colors px-3 py-2"
-          >
-            登录
-          </a>
-          <a
             href="#start"
             className="group inline-flex items-center gap-2 bg-zebra-ink text-zebra-bone px-5 py-2.5 text-sm font-semibold hover:bg-zebra-amber hover:text-zebra-ink transition-all duration-300 shadow-hard-sm hover:translate-x-[-2px] hover:translate-y-[-2px]"
           >
-            开始投放
+            联系商务
             <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
           </a>
         </div>
@@ -92,7 +86,7 @@ export function SiteHeader() {
               onClick={() => setOpen(false)}
               className="mt-4 inline-flex items-center justify-center gap-2 bg-zebra-ink text-zebra-bone px-5 py-3 text-sm font-semibold"
             >
-              开始投放 <ArrowRight className="h-4 w-4" />
+              联系商务 <ArrowRight className="h-4 w-4" />
             </a>
           </nav>
         </div>
