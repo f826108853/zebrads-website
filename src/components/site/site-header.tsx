@@ -8,7 +8,6 @@ const navItems = [
   { label: '首页', href: '#home' },
   { label: '广告形式', href: '#ad-formats' },
   { label: '解决方案', href: '#solutions' },
-  { label: '数据洞察', href: '#insights' },
   { label: '关于我们', href: '#about' },
 ];
 
