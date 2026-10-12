@@ -36,7 +36,9 @@ export function CtaBanner() {
           <Reveal variant="right" className="lg:col-span-4" delay={200}>
             <div className="flex flex-col gap-4">
               <a
-                href="#contact-sales"
+                href="https://t.me/ZebradsJason"
+                target="_blank"
+                rel="noreferrer"
                 className="group inline-flex items-center justify-between gap-3 bg-zebra-ink text-zebra-bone px-7 py-5 text-base font-semibold shadow-hard hover:shadow-none hover:translate-x-[6px] hover:translate-y-[6px] transition-all duration-300"
               >
                 <span>联系销售团队</span>
