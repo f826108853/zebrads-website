@@ -50,7 +50,9 @@ export function SiteHeader() {
 
         <div className="hidden lg:flex items-center gap-3">
           <a
-            href="#start"
+            href="https://t.me/ZebradsJason"
+            target="_blank"
+            rel="noreferrer"
             className="group inline-flex items-center gap-2 bg-zebra-ink text-zebra-bone px-5 py-2.5 text-sm font-semibold hover:bg-zebra-amber hover:text-zebra-ink transition-all duration-300 shadow-hard-sm hover:translate-x-[-2px] hover:translate-y-[-2px]"
           >
             联系商务
@@ -82,7 +84,9 @@ export function SiteHeader() {
               </a>
             ))}
             <a
-              href="#start"
+              href="https://t.me/ZebradsJason"
+              target="_blank"
+              rel="noreferrer"
               onClick={() => setOpen(false)}
               className="mt-4 inline-flex items-center justify-center gap-2 bg-zebra-ink text-zebra-bone px-5 py-3 text-sm font-semibold"
             >
