@@ -20,7 +20,7 @@ Vercel 连接器读取团队 `f826108853-9605s-projects` 下的详细域名配�
 
 ## 环境与权限
 
-- 本次本地运行：Node.js 24.19.0 / pnpm 11.25.0；Next.js 所需 Node.js 下限 20.9.0 已写入 package.json。
+- 本次本地运行：Node.js 24.19.0 / pnpm 11.25.0；发布配置已统一为 Node.js 24.x / pnpm 11.25.0，避免本地与线上包管理器版本不同。
 - 构建和启动需要允许 Node.js 创建子进程并绑定本地端口。沙箱内的第一次 Turbopack 构建因 `Operation not permitted` 失败；授权后使用原生构建流程成功，没有切换替代构建器。
 - 依赖查询、下载和安全审计需要官方包仓库网络权限；已使用 `registry.npmjs.org`。
 - 本工作区现有依赖使用 `.pnpm-store/v11`。新增依赖若使用默认缓存会出现 `ERR_PNPM_UNEXPECTED_STORE`；本次沿用 `--store-dir .pnpm-store`，没有修改全局 pnpm 配置。
@@ -32,7 +32,7 @@ Vercel 连接器读取团队 `f826108853-9605s-projects` 下的详细域名配�
 
 - Next.js 16.1.1 → 16.4.0，React / React DOM 19.2.3 → 19.3.0；同步 eslint-config-next，更新 AWS SDK、Drizzle ORM 和有补丁的传递依赖。
 - 将 drizzle-kit 移入开发依赖。
-- 安装限制脚本改用 pnpm，移除 npx 调用；补充 Node.js 版本要求。
+- 安装限制脚本改用 pnpm，移除 npx 调用；固定生产使用的 Node.js 主版本和 pnpm 版本，并补齐 workspace 的 packages 字段。
 - 修复“关于我们”悬空锚点，将广告预览中无响应的“立即查看”按钮连接至商务入口；补充菜单状态与广告选择状态的无障碍属性。
 - robots.txt 不再禁止搜索引擎访问页面所需的 `_next` 和静态资源。
 - 增补环境文件与本地 pnpm 缓存的 Git 忽略规则，修正文档中的默认端口和环境说明。

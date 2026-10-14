@@ -6,7 +6,7 @@ Zebrads 官网基于 [Next.js 16](https://nextjs.org) + [shadcn/ui](https://ui.s
 
 ### 启动开发服务器
 
-需要 Node.js 20.9.0 或更高版本及 pnpm 9+。首次启动前执行 `pnpm install --frozen-lockfile`。本次排查环境使用 Node.js 24.19.0 / pnpm 11.25.0。
+项目统一使用 Node.js 24.x / pnpm 11.25.0，与 Vercel 生产环境保持一致。首次启动前执行 `pnpm install --frozen-lockfile`。本次排查环境使用 Node.js 24.19.0 / pnpm 11.25.0。
 
 若本机提示 `ERR_PNPM_UNEXPECTED_STORE`，检查现有依赖的缓存位置；本工作区使用 `.pnpm-store`，可执行 `pnpm install --frozen-lockfile --store-dir .pnpm-store`，新增或更新依赖时同样指定该目录。
 
@@ -352,7 +352,7 @@ export const useStore = create<Store>((set) => ({
 - **表单**: React Hook Form + Zod
 - **图标**: Lucide React
 - **字体**: Geist Sans & Geist Mono
-- **包管理器**: pnpm 9+
+- **包管理器**: pnpm 11.25.0
 - **TypeScript**: 5.x
 
 ## 参考文档
