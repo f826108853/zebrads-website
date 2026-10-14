@@ -10,7 +10,7 @@ Zebrads 官网基于 [Next.js 16](https://nextjs.org) + [shadcn/ui](https://ui.s
 
 若本机提示 `ERR_PNPM_UNEXPECTED_STORE`，检查现有依赖的缓存位置；本工作区使用 `.pnpm-store`，可执行 `pnpm install --frozen-lockfile --store-dir .pnpm-store`，新增或更新依赖时同样指定该目录。
 
-`pnpm-workspace.yaml` 已记录 esbuild 安装脚本授权（pnpm 11 的 `allowBuilds` 配置）。升级依赖后如出现 `ERR_PNPM_IGNORED_BUILDS`，使用 `pnpm approve-builds` 核对具体依赖，不要全局放开全部脚本。
+`pnpm-workspace.yaml` 已记录 esbuild 和 ESLint 原生解析依赖 unrs-resolver 的安装脚本授权（pnpm 11 的 `allowBuilds` 配置）。升级依赖后如出现 `ERR_PNPM_IGNORED_BUILDS`，使用 `pnpm approve-builds` 核对具体依赖，不要全局放开全部脚本。
 
 ```bash
 pnpm dev
