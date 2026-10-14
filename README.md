@@ -6,11 +6,17 @@ Zebrads 官网基于 [Next.js 16](https://nextjs.org) + [shadcn/ui](https://ui.s
 
 ### 启动开发服务器
 
+需要 Node.js 20.9.0 或更高版本及 pnpm 9+。首次启动前执行 `pnpm install --frozen-lockfile`。本次排查环境使用 Node.js 24.19.0 / pnpm 11.25.0。
+
+若本机提示 `ERR_PNPM_UNEXPECTED_STORE`，检查现有依赖的缓存位置；本工作区使用 `.pnpm-store`，可执行 `pnpm install --frozen-lockfile --store-dir .pnpm-store`，新增或更新依赖时同样指定该目录。
+
+`pnpm-workspace.yaml` 已记录 esbuild 安装脚本授权（pnpm 11 的 `allowBuilds` 配置）。升级依赖后如出现 `ERR_PNPM_IGNORED_BUILDS`，使用 `pnpm approve-builds` 核对具体依赖，不要全局放开全部脚本。
+
 ```bash
 pnpm dev
 ```
 
-启动后，在浏览器中打开 [http://localhost:5000](http://localhost:5000) 查看应用。
+启动后，在浏览器中打开 [http://localhost:3000](http://localhost:3000) 查看应用。
 
 开发服务器支持热更新，修改代码后页面会自动刷新。
 
@@ -27,6 +33,12 @@ pnpm start
 ```
 
 ## 项目结构
+
+当前项目是静态营销官网，没有登录、数据库、API 或站内开户功能；商务按钮跳转至真实 Telegram 联系地址。运行当前页面不需要自定义环境变量，也不需要 Supabase、Postgres 或 AWS 凭据。相关 SDK 仅属于预装依赖。
+
+页面字体从 `fonts.googleapis.cn` 加载，访问时需要网络；Telegram 商务链接同样需要外网访问。本地开发和生产预览需要允许 Node.js 创建子进程和监听本地端口。在受限执行环境中，生产构建也可能需要内部端口权限。
+
+当前仓库没有本地 Vercel 项目绑定信息。未来接入生产服务时，应从已确认的生产项目获取真实环境变量，保存在被 Git 忽略的 `.env.local` 中。
 
 ```
 src/
@@ -334,7 +346,7 @@ export const useStore = create<Store>((set) => ({
 
 ## 技术栈
 
-- **框架**: Next.js 16.1.1 (App Router)
+- **框架**: Next.js 16.4.0 (App Router)
 - **UI 组件**: shadcn/ui (基于 Radix UI)
 - **样式**: Tailwind CSS v4
 - **表单**: React Hook Form + Zod
@@ -358,4 +370,4 @@ export const useStore = create<Store>((set) => ({
 4. **使用 TypeScript** 进行类型安全开发
 5. **使用 `@/` 路径别名** 导入模块（已配置）
 
-Last updated: 2026-07-02
+Last updated: 2026-10-14

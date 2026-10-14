@@ -122,6 +122,7 @@ export function AdFormats() {
               <button
                 key={f.id}
                 type="button"
+                aria-pressed={isActive}
                 onClick={() => setActive(f.id)}
                 className={`shrink-0 group inline-flex items-center gap-2 px-5 py-3 border text-sm font-semibold transition-all duration-300 ${
                   isActive
@@ -204,12 +205,12 @@ export function AdFormats() {
                       <div className="font-bold text-lg leading-snug mb-3">
                         {current.headline}
                       </div>
-                      <button
-                        type="button"
+                      <a
+                        href="#start"
                         className="mt-2 px-5 py-2 bg-zebra-amber text-zebra-ink text-xs font-bold"
                       >
                         立即查看 →
-                      </button>
+                      </a>
                     </div>
                   </div>
                   <div className="mt-5 grid grid-cols-3 gap-3 text-center">

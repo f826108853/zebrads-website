@@ -8,7 +8,7 @@ const navItems = [
   { label: '首页', href: '#home' },
   { label: '广告形式', href: '#ad-formats' },
   { label: '解决方案', href: '#solutions' },
-  { label: '关于我们', href: '#about' },
+  { label: '关于我们', href: '#features' },
 ];
 
 export function SiteHeader() {
@@ -63,6 +63,8 @@ export function SiteHeader() {
         <button
           type="button"
           aria-label="切换菜单"
+          aria-expanded={open}
+          aria-controls="mobile-navigation"
           onClick={() => setOpen((v) => !v)}
           className="lg:hidden text-zebra-ink p-2"
         >
@@ -72,7 +74,7 @@ export function SiteHeader() {
 
       {open && (
         <div className="lg:hidden border-t border-black/10 bg-zebra-bone">
-          <nav className="px-6 py-4 flex flex-col gap-1">
+          <nav id="mobile-navigation" className="px-6 py-4 flex flex-col gap-1">
             {navItems.map((item) => (
               <a
                 key={item.href}
